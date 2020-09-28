@@ -1,0 +1,27 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 2332
+  path: /api/movies
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: movies.log
+
+databaseConfig:
+  dbUsername: root
+  dbPassword: Pwned007!
+  dbHostname: localhost
+  dbPort: 3306
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: moviedb
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+
+idmConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 2331
+  path: /api/idm
+
+idmEndpoints:
+  privilege: /privilege

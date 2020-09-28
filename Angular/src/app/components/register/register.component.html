@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="180px" >
+    <div class="formLayout">
+        <h1 class="loginHeader">
+            Register
+        </h1>
+        <form fxLayout="column">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="pat@example.com" [(ngModel)]="userName" [formControl]="userNameControl" #userNameInput name="userName" autocomplete="off">
+                <mat-error *ngIf="userNameControl.invalid">{{ getErrorMessage(userNameControl) }}</mat-error> 
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" [(ngModel)]="password" [formControl]="passwordControl" name="password">
+                <mat-error *ngIf="passwordControl.invalid">{{ getErrorMessage(passwordControl) }}</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Re-Enter Password" [(ngModel)]="passwordAgain" [formControl]="passwordAgainControl" name="passwordAgain">
+                <mat-error *ngIf="passwordAgainControl.invalid">{{ getErrorMessage(passwordAgainControl) }}</mat-error>
+            </mat-form-field>
+        </form>
+        <button class="submitButton" [disabled]="!userName || !password || !passwordAgain" (click)="onClick()" mat-raised-button>Sign up</button>
+        <p>Already have an account? <a routerLink="/login" routerLinkActive="active">Login</a></p>
+    </div>
+</div>

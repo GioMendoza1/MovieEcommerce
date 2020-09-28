@@ -1,0 +1,23 @@
+serviceConfig:
+  scheme: http://
+  hostName: 0.0.0.0
+  port: 2331
+  path: /api/idm
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: basicService.log
+
+sessionConfig:
+  timeout: 10000
+  expiration: 10000
+
+databaseConfig:
+  dbUsername: root
+  dbPassword: Pwned007!
+  dbHostname: localhost
+  dbPort: 3306
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: moviedb
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+

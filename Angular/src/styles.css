@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html {
+    height: 100%;
+    width: 100%;
+    /*background-repeat: no-repeat;*/
+    /*
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+    background: #1e5799 fixed; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%) fixed;  /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%) fixed;  /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%) fixed;  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ) fixed;  /* IE6-9 fallback on horizontal gradient */
+}
+
+body { 
+    margin:0;
+}
+
+@font-face {
+	font-family: 'Lato'; 
+	src: url(assets/fonts/Lato-Regular.ttf);  
+    font-weight: 400;
+    font-style: normal; 
+}
+
+@font-face {
+	font-family: 'Bebas'; 
+	src: url(assets/fonts/BebasNeue-Bold.ttf);  
+    font-weight: normal;
+    font-style: normal;
+}
+
+.filter-white{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(104%) contrast(101%);
+}
