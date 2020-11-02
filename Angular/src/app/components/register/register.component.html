@@ -20,6 +20,7 @@
             </mat-form-field>
         </form>
         <button class="submitButton" [disabled]="!userName || !password || !passwordAgain" (click)="onClick()" mat-raised-button>Sign up</button>
-        <p>Already have an account? <a routerLink="/login" routerLinkActive="active">Login</a></p>
+        <p [ngClass]="{'responseEnabled': responseReturned || responseErrorReturned, 'responseDisabled': !responseReturned && !responseErrorReturned, 'responseErrorEnabled': responseErrorReturned}">{{ responseMessage }}</p>
+        <p [ngClass]="responseReturned || responseErrorReturned ? 'loginDisabled' : 'loginEnabled'">Already have an account? <a routerLink="/login" routerLinkActive="active">Login</a></p>
     </div>
 </div>

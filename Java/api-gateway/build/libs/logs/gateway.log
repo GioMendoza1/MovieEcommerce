@@ -1,109 +1,97 @@
-[2020/09/23 16:37:18][CONFIG][initLogger]  [32mLogging initialized.[0m
-[2020/09/23 16:37:18][CONFIG][initService]  Starting service...
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Scheme: http://
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Hostname: 0.0.0.0
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Port: 2334
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Path: /api/g
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Number of threads in pool: 5
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Logger output directory: ./logs/
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Logger output file: gateway.log
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Database hostname: localhost
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Database port: 3306
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Database username: root
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Database password provided? true
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Database name: moviedb
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM] scheme: http://
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM] hostname: 0.0.0.0
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM] port: 2331
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM] path: /api/idm
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM][EP] Register User: /register
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM][EP] Login User: /login
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM][EP] Verify Session: /session
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [IDM][EP] Verify User Privilege: /privilege
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies] scheme: http://
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies] hostname: 0.0.0.0
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies] port: 2332
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies] path: /api/movies
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Search Movie: /search
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Get Movie: /get
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Add Movie: /add
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Delete Movie: /delete
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Get All Genres: /genre
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Add Genre: /genre/add
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Get All Genres For Movie: /genre/
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Search Star: /star/search
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Get Star: /star/
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Add Star to Movie: /star/starsin
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Movies][EP] Update Movie Rating: /star/rating
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing] scheme: http://
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing] hostname: 0.0.0.0
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing] port: 2333
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing] path: /api/billing
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Update Cart: /cart/update
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Delete Cart: /cart/delete
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Insert Cart: /cart/insert
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Retrieve Cart: /cart/retrieve
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Clear Cart: /cart/clear
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Insert Credit Card: /creditcard/insert
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Update Credit Card: /creditcard/update
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Delete Credit Card: /creditcard/delete
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Retrieve Credit Card: /creditcard/retrieve
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Insert Customer: /customer/insert
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Update Customer: /creditcard/update
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Retrieve Customer: /creditcard/retrieve
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Place Order: /order/place
-[2020/09/23 16:37:18][CONFIG][currentConfigs]  [Billing][EP] Retrieve Order: /order/retrieve
-[2020/09/23 16:37:18][CONFIG][<init>]  Initializing connection pool...
-[2020/09/23 16:37:18][CONFIG][<init>]  Creating connection #1
-[2020/09/23 16:37:18][CONFIG][<init>]  Creating connection #2
-[2020/09/23 16:37:18][CONFIG][<init>]  Creating connection #3
-[2020/09/23 16:37:18][CONFIG][<init>]  Creating connection #4
-[2020/09/23 16:37:18][CONFIG][<init>]  Creating connection #5
-[2020/09/23 16:37:18][CONFIG][initThreadPool]  Initializing thread pool.
-[2020/09/23 16:37:18][CONFIG][initThreadPool]  [32mInitializing thread pool.[0m
-[2020/09/23 16:37:18][CONFIG][initHTTPServer]  Initializing HTTP server...
-[2020/09/23 16:37:18][CONFIG][initHTTPServer]  Building URI from configs...
-[2020/09/23 16:37:18][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:2334/api/g
-[2020/09/23 16:37:18][CONFIG][initHTTPServer]  Set Jersey resources.
-[2020/09/23 16:37:18][CONFIG][initHTTPServer]  Set Jackson as serializer.
-[2020/09/23 16:37:18][CONFIG][initHTTPServer]  Starting HTTP server...
-[2020/09/23 16:37:19][CONFIG][initHTTPServer]  [32mHTTP server started.[0m
-[2020/09/23 16:37:19][CONFIG][initService]  [32mService initialized.[0m
-[2020/09/23 16:37:53][INFO][loginUserRequest]  Received request to login the user.
-[2020/09/23 16:37:53][INFO][verifyModel]  Verifying model format...
-[2020/09/23 16:37:53][INFO][verifyModel]  Attempting to deserialize JSON to POJO
-[2020/09/23 16:37:53][INFO][verifyModel]  Successfully deserialized JSON to POJO.
-[2020/09/23 16:37:53][INFO][verifyModel]  Model has been validated.
-[2020/09/23 16:37:53][INFO][process]  Processing request # null at 53 seconds.
-[2020/09/23 16:37:53][INFO][process]  Building client...
-[2020/09/23 16:37:53][INFO][process]  Building URI...
-[2020/09/23 16:37:53][INFO][process]  Setting path to endpoint...
-[2020/09/23 16:37:53][INFO][process]  Building WebTarget...
-[2020/09/23 16:37:53][INFO][process]  Starting invocation builder...
-[2020/09/23 16:37:53][INFO][process]  Sending request...
-[2020/09/23 16:37:53][INFO][process]  Setting payload of the request...
-[2020/09/23 16:37:54][INFO][process]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) VALUES ('3dd664823ed4cf3b235182a23745580b06a27d761c2f33070a524e286a6fbd667e79e4c9d9e766bfec723ee3844049a419c92f81ab3aa713fa0da456a1f57d77',null,null,'{"resultCode":120,"message":"User logged in successfully.","sessionID":"dee4ddba5a07d532950fd39443baaf5a51d191d98b2342ccefc22bf3014a9d6a5be4f56b0047f4032cfb6181d50c37dc1ff5507aec188571dbdc259f16e81cfe"}',200);
-[2020/09/23 16:37:54][INFO][process]  Success!
-[2020/09/23 16:37:54][INFO][process]  Released connection.
-[2020/09/23 16:43:34][INFO][loginUserRequest]  Received request to login the user.
-[2020/09/23 16:43:34][INFO][verifyModel]  Verifying model format...
-[2020/09/23 16:43:34][INFO][verifyModel]  Attempting to deserialize JSON to POJO
-[2020/09/23 16:43:34][INFO][verifyModel]  Successfully deserialized JSON to POJO.
-[2020/09/23 16:43:34][INFO][verifyModel]  Model has been validated.
-[2020/09/23 16:43:34][INFO][process]  Processing request # null at 34 seconds.
-[2020/09/23 16:43:34][INFO][process]  Building client...
-[2020/09/23 16:43:34][INFO][process]  Building URI...
-[2020/09/23 16:43:34][INFO][process]  Setting path to endpoint...
-[2020/09/23 16:43:34][INFO][process]  Building WebTarget...
-[2020/09/23 16:43:34][INFO][process]  Starting invocation builder...
-[2020/09/23 16:43:34][INFO][process]  Sending request...
-[2020/09/23 16:43:34][INFO][process]  Setting payload of the request...
-[2020/09/23 16:43:34][INFO][process]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) VALUES ('9c463b77653a35aa7657544897a6d71a71bd9fc3f9a51414c6da108a2b9968ed7ba3efdbbcaa3d30768d707bce5194e51e869040330e5d6f1696b55382bc8d7d',null,null,'{"resultCode":120,"message":"User logged in successfully.","sessionID":"8866e18e23039118fa85bd461a82cd4f7ffe0a561ab0f1746625a3d82857cd1729a40a8255ce798f09d70580dab1e8c86b315e2473ac463b3cbcb452cee3210a"}',200);
-[2020/09/23 16:43:34][INFO][process]  Success!
-[2020/09/23 16:43:34][INFO][process]  Released connection.
-[2020/09/23 16:43:34][INFO][report]  Testing transactionID 9c463b77653a35aa7657544897a6d71a71bd9fc3f9a51414c6da108a2b9968ed7ba3efdbbcaa3d30768d707bce5194e51e869040330e5d6f1696b55382bc8d7d
-[2020/09/23 16:43:34][INFO][report]  Attempting to retrieve from responses
-[2020/09/23 16:43:34][INFO][report]  Attempting to delete response from table
-[2020/09/23 16:43:34][INFO][report]  Deletion completed
+[2020/10/14 20:09:19][CONFIG][initLogger]  [32mLogging initialized.[0m
+[2020/10/14 20:09:19][CONFIG][initService]  Starting service...
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Scheme: http://
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Port: 2334
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Path: /api/g
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Number of threads in pool: 5
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Logger output file: gateway.log
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Database hostname: localhost
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Database port: 3306
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Database username: root
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Database password provided? true
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Database name: moviedb
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM] scheme: http://
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM] hostname: 0.0.0.0
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM] port: 2331
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM] path: /api/idm
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM][EP] Register User: /register
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM][EP] Login User: /login
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM][EP] Verify Session: /session
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [IDM][EP] Verify User Privilege: /privilege
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies] scheme: http://
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies] hostname: 0.0.0.0
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies] port: 2332
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies] path: /api/movies
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Search Movie: /search
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Get Movie: /get
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Add Movie: /add
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Delete Movie: /delete
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Get All Genres: /genre
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Add Genre: /genre/add
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Get All Genres For Movie: /genre/
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Search Star: /star/search
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Get Star: /star/
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Add Star to Movie: /star/starsin
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Movies][EP] Update Movie Rating: /star/rating
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing] scheme: http://
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing] hostname: 0.0.0.0
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing] port: 2333
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing] path: /api/billing
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Update Cart: /cart/update
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Delete Cart: /cart/delete
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Insert Cart: /cart/insert
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Retrieve Cart: /cart/retrieve
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Clear Cart: /cart/clear
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Insert Credit Card: /creditcard/insert
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Update Credit Card: /creditcard/update
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Delete Credit Card: /creditcard/delete
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Retrieve Credit Card: /creditcard/retrieve
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Insert Customer: /customer/insert
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Update Customer: /creditcard/update
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Retrieve Customer: /creditcard/retrieve
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Place Order: /order/place
+[2020/10/14 20:09:19][CONFIG][currentConfigs]  [Billing][EP] Retrieve Order: /order/retrieve
+[2020/10/14 20:09:19][CONFIG][<init>]  Initializing connection pool...
+[2020/10/14 20:09:19][CONFIG][<init>]  Creating connection #1
+[2020/10/14 20:09:19][CONFIG][<init>]  Creating connection #2
+[2020/10/14 20:09:19][CONFIG][<init>]  Creating connection #3
+[2020/10/14 20:09:19][CONFIG][<init>]  Creating connection #4
+[2020/10/14 20:09:19][CONFIG][<init>]  Creating connection #5
+[2020/10/14 20:09:19][CONFIG][initThreadPool]  Initializing thread pool.
+[2020/10/14 20:09:19][CONFIG][initThreadPool]  [32mInitializing thread pool.[0m
+[2020/10/14 20:09:19][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2020/10/14 20:09:19][CONFIG][initHTTPServer]  Building URI from configs...
+[2020/10/14 20:09:19][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:2334/api/g
+[2020/10/14 20:09:19][CONFIG][initHTTPServer]  Set Jersey resources.
+[2020/10/14 20:09:19][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2020/10/14 20:09:19][CONFIG][initHTTPServer]  Starting HTTP server...
+[2020/10/14 20:09:20][CONFIG][initHTTPServer]  [32mHTTP server started.[0m
+[2020/10/14 20:09:20][CONFIG][initService]  [32mService initialized.[0m
+[2020/10/14 20:10:04][INFO][registerUserRequest]  Received request to register user.
+[2020/10/14 20:10:04][INFO][verifyModel]  Verifying model format...
+[2020/10/14 20:10:04][INFO][verifyModel]  Attempting to deserialize JSON to POJO
+[2020/10/14 20:10:04][INFO][verifyModel]  Successfully deserialized JSON to POJO.
+[2020/10/14 20:10:04][INFO][verifyModel]  Model has been validated.
+[2020/10/14 20:10:04][INFO][registerUserRequest]  test7@gmail.com
+[2020/10/14 20:10:04][INFO][registerUserRequest]  Testing123!
+[2020/10/14 20:10:04][INFO][process]  Processing request # null at 4 seconds.
+[2020/10/14 20:10:04][INFO][process]  Building client...
+[2020/10/14 20:10:04][INFO][process]  Building URI...
+[2020/10/14 20:10:04][INFO][process]  Setting path to endpoint...
+[2020/10/14 20:10:04][INFO][process]  Building WebTarget...
+[2020/10/14 20:10:04][INFO][process]  Starting invocation builder...
+[2020/10/14 20:10:04][INFO][process]  Sending request...
+[2020/10/14 20:10:04][INFO][process]  Setting payload of the request...
+[2020/10/14 20:10:04][INFO][report]  Testing transactionID 519819edca60afdc500545dda17e01cbe298f24e5284827cfc303ddd0d277ba037b11443c857b5f96d99493055b2f875dce8d1437c0849f339b96bc3e29a7f71
+[2020/10/14 20:10:04][INFO][report]  Attempting to retrieve from responses
+[2020/10/14 20:10:05][INFO][process]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO responses(transactionid, email, sessionid, response, httpstatus) VALUES ('519819edca60afdc500545dda17e01cbe298f24e5284827cfc303ddd0d277ba037b11443c857b5f96d99493055b2f875dce8d1437c0849f339b96bc3e29a7f71',null,null,'{"resultCode":110,"message":"User registered successfully."}',200);
+[2020/10/14 20:10:05][INFO][process]  Success!
+[2020/10/14 20:10:05][INFO][process]  Released connection.
+[2020/10/14 20:10:05][INFO][report]  Testing transactionID 519819edca60afdc500545dda17e01cbe298f24e5284827cfc303ddd0d277ba037b11443c857b5f96d99493055b2f875dce8d1437c0849f339b96bc3e29a7f71
+[2020/10/14 20:10:05][INFO][report]  Attempting to retrieve from responses
+[2020/10/14 20:10:05][INFO][report]  Attempting to delete response from table
+[2020/10/14 20:10:05][INFO][report]  Deletion completed

@@ -48,3 +48,23 @@
     background-color: #303F9F;
     margin-top: 5%;
 }
+
+.responseEnabled {
+    display: block;
+}
+
+.responseErrorEnabled{
+    color: red;
+}
+
+.responseDisabled {
+    display: none;
+}
+
+.loginEnabled {
+    display: block;
+}
+
+.loginDisabled {
+    display: none;
+}

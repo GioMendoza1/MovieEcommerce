@@ -1,14 +1,6 @@
-import { Component, ViewChild, AfterViewInit, OnInit, Injectable} from '@angular/core';
-import { MatInput } from '@angular/material/input';
-import {
-  HttpClient
-} from '@angular/common/http';
-import { interval, Observable } from 'rxjs';
-import { map, catchError, first} from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { Component, AfterViewInit, OnInit} from '@angular/core';
+import { interval, Subscription } from 'rxjs';
 import { IdmService } from 'src/app/services/idm/idm.service';
-import { RegisterRequestModel } from 'src/app/models/idm/register-request-model';
-import { RegisterResponseModel } from 'src/app/models/idm/register-response-model';
 import { NoContentResponseModel } from 'src/app/models/no-content-response-model';
 import { LoginRequestModel } from 'src/app/models/idm/login-request-model';
 import { GatewayService } from 'src/app/services/gateway/gateway.service';
@@ -31,8 +23,14 @@ export class LoginComponent implements OnInit, AfterViewInit {
   public userName: string = "";
   public password: string = "";
 
+  public responseMessage: string = "";
+  public responseReturned: boolean = false;
+  public responseErrorReturned: boolean = false;
+
   public userNameControl = new FormControl('', [Validators.required, Validators.email]);
   public passwordControl = new FormControl('', [Validators.required]);
+
+  private intervalSub: Subscription;
 
 
   ngOnInit() {
@@ -40,6 +38,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log('Values on ngAfterViewInit():');    
+  }
+
+  ngOnDestroy() {
+    this.intervalSub.unsubscribe();
   }
 
   public getErrorMessage(control: FormControl) {
@@ -54,22 +56,37 @@ export class LoginComponent implements OnInit, AfterViewInit {
     requestModel.email = this.userName;
     requestModel.password = this.password;
 
-    let requestCode: NoContentResponseModel = await this.idmService.loginRequest(requestModel)
+    let requestCode: NoContentResponseModel = await this.idmService.loginRequest(requestModel);
+    let successfulLogin: boolean = false;
 
-    const intervalSub = interval(requestCode.delay)
+    this.intervalSub = interval(requestCode.delay)
       .subscribe(
         async () => {
           let responseCode: string = await this.gatewayService.reportResponse(requestCode.transactionID)
           if (responseCode !== "nocontent") {
-            let responseCodeObj = new LoginResponseModel().deserialize(responseCode)
-            if (responseCodeObj.resultCode === 220)
-              alert(responseCodeObj.message);
-            else
-              alert(responseCodeObj.message);
-            intervalSub.unsubscribe();
+            let responseCodeObj: LoginResponseModel = new LoginResponseModel().deserialize(responseCode);
+            successfulLogin = this.checkResponse(responseCodeObj);
+            this.intervalSub.unsubscribe();
           }
-          intervalSub.unsubscribe();
         }  
-      )     
+      )
+  }
+
+  private checkResponse(response: LoginResponseModel): boolean {
+    this.responseMessage = "";
+    if (response.resultCode === 120){
+      this.responseReturned = true;
+      if (this.responseErrorReturned)
+        this.responseErrorReturned = false;
+      this.responseMessage = response.message;
+      
+      return true;
+    }
+    else{
+      this.responseErrorReturned = true;
+      this.responseMessage = "Error: " + response.message;
+
+      return false;
+    }
   }
 }
